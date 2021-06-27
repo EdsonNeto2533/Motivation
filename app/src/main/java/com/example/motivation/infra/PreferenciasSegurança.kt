@@ -11,7 +11,8 @@ class PreferenciasSegurança(context: Context) {
     fun salvarString(chave: String, valor: String){
         mSharedPreferences.edit().putString(chave , valor).apply()
     }
-    fun getString (chave: String){
-
+    fun getString (chave: String): String{
+        //o operador elvis funciona como um if, se a chave estiver vazia ele retorna a string vazia
+        return mSharedPreferences.getString(chave , "") ?: ""
     }
 }
