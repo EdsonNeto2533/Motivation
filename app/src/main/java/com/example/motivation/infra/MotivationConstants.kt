@@ -4,7 +4,13 @@ package com.example.motivation.infra
 class MotivationConstants private constructor() {
     //object para ser acessado
     object key {
-        val nome_pessoa = "nome"
+         val nomePessoa = "nome"
+    }
+
+    object filtroFrase {
+        val feliz = 1
+        val bomDia = 2
+        val todos = 3
     }
 
 }

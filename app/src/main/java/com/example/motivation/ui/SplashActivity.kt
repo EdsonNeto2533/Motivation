@@ -29,7 +29,7 @@ class SplashActivity : AppCompatActivity() {
 
     }
 
-    fun hideToolbar(){
+    private fun hideToolbar(){
         //esconde toolbar, o suporteActionBar!! garante a execução pois o kotlin espera nullPointerExecption
         if(supportActionBar != null){
             supportActionBar!!.hide()
@@ -42,7 +42,7 @@ class SplashActivity : AppCompatActivity() {
         //qnd clicar em salvar ele vai salvar o nome digitado no sharedPreferences com a chave
         //definida na constante fixa
         if (nome != ""){
-            mPreferenciasSegurança.salvarString(MotivationConstants.key.nome_pessoa , nome)
+            mPreferenciasSegurança.salvarString(MotivationConstants.key.nomePessoa , nome)
             val inti = Intent(this, MainActivity::class.java)
             startActivity(inti)
         } else {
