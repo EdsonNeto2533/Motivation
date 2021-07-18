@@ -76,7 +76,7 @@
         android:layout_height="wrap_content"
         android:text="Nova Frase"
         android:id="@+id/btnNovaFrase"
-        android:backgroundTint="@color/roxo"
+        android:background="@drawable/efeito_ripple"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"

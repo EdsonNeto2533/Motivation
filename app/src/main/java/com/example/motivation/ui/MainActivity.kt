@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mPreferenciasSegurança: PreferenciasSegurança
+    //garantir que no inicio da activity ja venha algo no filtro
     private var filtro: Int = MotivationConstants.filtroFrase.todos
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +34,6 @@ class MainActivity : AppCompatActivity() {
             novoFiltro(MotivationConstants.filtroFrase.bomDia)
         }
         imgFeliz.setOnClickListener {
-
             novoFiltro(MotivationConstants.filtroFrase.feliz)
         }
         btnNovaFrase.setOnClickListener {

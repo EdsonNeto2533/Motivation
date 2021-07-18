@@ -27,6 +27,8 @@ class SplashActivity : AppCompatActivity() {
             botaoSalvar()
         }
 
+        verificaNome()
+
     }
 
     private fun hideToolbar(){
@@ -47,6 +49,15 @@ class SplashActivity : AppCompatActivity() {
             startActivity(inti)
         } else {
             Toast.makeText(this,"Preencha o nome", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun verificaNome(){
+        // o sharedPreferences fica salvo no cache do smartphone
+        val nome = mPreferenciasSegurança.getString(MotivationConstants.key.nomePessoa)
+        if (nome != ""){
+            val inti = Intent(this, MainActivity::class.java)
+            startActivity(inti)
         }
     }
 }
