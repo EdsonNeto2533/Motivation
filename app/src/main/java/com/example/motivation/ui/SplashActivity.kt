@@ -47,6 +47,8 @@ class SplashActivity : AppCompatActivity() {
             mPreferenciasSegurança.salvarString(MotivationConstants.key.nomePessoa , nome)
             val inti = Intent(this, MainActivity::class.java)
             startActivity(inti)
+            //finish mata a activity
+            finish()
         } else {
             Toast.makeText(this,"Preencha o nome", Toast.LENGTH_SHORT).show()
         }
@@ -58,6 +60,7 @@ class SplashActivity : AppCompatActivity() {
         if (nome != ""){
             val inti = Intent(this, MainActivity::class.java)
             startActivity(inti)
+            finish()
         }
     }
 }
